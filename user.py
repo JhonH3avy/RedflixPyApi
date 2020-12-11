@@ -1,8 +1,9 @@
-class User:
-    def __init__(self, name, lastname, identityNumber, phone, email):
-        self.name = name
-        self.lastname = lastname
-        self.identityNumber = identityNumber
-        self.phone = phone
-        self.email = email
+from pydantic import BaseModel
+class User(BaseModel):
+    id: int
+    name: str
+    lastname: str
+    identity_number: str
+    phone: str
+    email: str
 
